@@ -1,0 +1,11 @@
+siparis_no,musteri_adi,urun_kodu,kargo_durumu,iade_edilebilir_mi
+12345,Zeynep Can,SAAT-OT-01,"Kargoya verildi, teslimat yarın",True
+67890,Ahmet Yılmaz,KOR-CELIK-02,Hazırlanıyor (Depoda),False
+55555,Ayşe Kaya,SAAT-AKS-03,Teslim edildi,True
+11111,Can Demir,SAAT-DIG-04,"Dağıtımda, bugün ulaşacak",True
+22222,Elif Yıldız,SAAT-OT-01,"Kargoya verildi, 2 güne teslim",False
+33333,Mehmet Çelik,KOR-DERI-05,İptal edildi,False
+44444,Selin Ak,SAAT-LUP-06,Hazırlanıyor,True
+77777,Burak Koç,SAAT-DIG-04,Teslim edildi,True
+88888,Deniz Arslan,SAAT-OT-01,Kargoya verildi,False
+99999,Gamze Şahin,KOR-CELIK-02,Depoda hazırlanıyor,True
