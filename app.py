@@ -5,10 +5,10 @@ import pandas as pd
 import streamlit as st
 
 # Sayfa Yapılandırması
-st.set_page_config(page_title="E-Ticaret Asistanı ", page_icon="🛍️ ", layout="centered")
+st.set_page_config(page_title="E-Ticaret Asistanın ", page_icon="🛍️ ", layout="centered")
 
-st.title("🛍️ Akıllı E-Ticaret Destek Asistanı")
-st.write("Sipariş ve stok durumunuzu anında sorgulayan akıllı DSPy ajanı.")
+st.title("🛍️  Akıllı E-Ticaret Destek Asistanı")
+st.write("Sipariş ve stok durumunuzu anında sorgulayan akıllı Ajan.")
 
 # DSPy Yapılandırması
 @st.cache_resource
