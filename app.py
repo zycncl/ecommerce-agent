@@ -62,10 +62,18 @@ if prompt := st.chat_input("Örn: 55555 numaralı siparişimin durumu nedir?"):
     with st.chat_message("assistant"):
         with st.spinner("Asistan verileri kontrol ediyor..."):
             try:
-                yanit = agent(question=prompt)
+                # Son 4 mesajı bağlam olarak birleştiriyoruz ki ajan konuyu unutmasın
+                gecmis_metni = ""
+                for msg in st.session_state.messages[-4:]:
+                    rol = "Kullanıcı" if msg["role"] == "user" else "Asistan"
+                    gecmis_metni += f"{rol}: {msg['content']}\n"
+                
+                tam_soru = f"Önceki Sohbet:\n{gecmis_metni}\nGüncel İstek: {prompt}"
+                
+                yanit = agent(question=tam_soru)
                 response_text = yanit.answer
             except Exception as e:
-                response_text = f"Bir hata oluştu: {str(e)}"
+                response_text = f"Bir hata oluştu (Kota aşımı olabilir, 30 saniye bekleyin): {str(e)}"
         
         st.markdown(response_text)
         st.session_state.messages.append({"role": "assistant", "content": response_text})
